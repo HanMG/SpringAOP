@@ -2,10 +2,14 @@ package com.moon.service;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.moon.domain.MessageVO;
 import com.moon.persistence.MessageDAO;
 import com.moon.persistence.PointDAO;
 
+@Service
 public class MessageServiceImpl implements MessageService {
 	
 	@Inject
@@ -14,6 +18,7 @@ public class MessageServiceImpl implements MessageService {
 	@Inject
 	private PointDAO pointDAO;
 
+	@Transactional
 	@Override
 	public void addMessage(MessageVO vo) throws Exception {
 		messageDAO.create(vo);

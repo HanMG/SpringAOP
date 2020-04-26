@@ -186,15 +186,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${org.springframework-version}</version>
-		</dependency>
-
-		<!-- aspectjrt -->
-		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>1.8.13</version>
-		</dependency>
+		</dependency>	
 		
 		<!-- aspectjweaver -->
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->

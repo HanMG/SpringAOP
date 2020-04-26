@@ -70,7 +70,7 @@
 	</div>
 	<ul class="timeline">
 		<li class="time-label" id="repliesDiv"><span class="bg-green">Replies
-				List</span></li>
+				List <small id="replycntSmall"> [${boardVO.replycnt}] </small></span></li>
 	</ul>
 	<div class="text-center">
 		<ul id="pagination" class="pagination pagination-sm no-margin">
@@ -146,6 +146,7 @@
 			printPaging(data.pageMaker, $(".pagination"));
 
 			$("#modifyModal").modal('hide');
+			$("#replycntSmall").html("["+data.pageMaker.totalCount+"]");
 
 		});
 	}
@@ -300,6 +301,6 @@
 			formObj.attr("action", "/sboard/list");
 			formObj.submit();
 		});
-	});
+	});	
 </script>
 <%@ include file="../include/footer.jsp"%>

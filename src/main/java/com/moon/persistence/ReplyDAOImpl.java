@@ -56,4 +56,19 @@ public class ReplyDAOImpl implements ReplyDAO {
 		return session.selectOne(namespace+".count", bno);
 	}
 
+	@Override
+	public void updateReplyCnt(Integer bno, int amount) throws Exception {
+		Map<String,Object> paramMap = new HashMap<String,Object>();
+		
+		paramMap.put("bno", bno);
+		paramMap.put("amount", amount);
+		
+		session.update(namespace+".updateReplyCnt", paramMap);
+	}
+
+	@Override
+	public int getBno(Integer rno) throws Exception {
+		return session.selectOne(namespace+".getBno",rno);
+	}
+
 }
